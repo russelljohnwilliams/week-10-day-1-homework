@@ -25,6 +25,12 @@ public class RecordShop {
     int stockCheck = stockCheck();
     stock[stockCheck] = album; 
   }
+
+  public void sellAnAlbum(){
+    for (int i = 0; i < stock.length; i++){
+      stock[i] = null;
+    }
+  }
 }
 
 

@@ -27,4 +27,12 @@ public class RecordShopTest{
     assertEquals(1, recordShop.stockCheck());
   }
 
+  @Test
+  public void sellAnAlbum(){
+    recordShop.checkInStock(album);
+    assertEquals(1, recordShop.stockCheck());
+    recordShop.sellAnAlbum();
+    assertEquals(0, recordShop.stockCheck());
+  }
+
 }
