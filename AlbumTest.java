@@ -19,4 +19,9 @@ public class AlbumTest{
   assertEquals("Loveless", album.getTitle());
   }
 
+  @Test
+  public void albumHasPrice(){
+  assertEquals(7.99, album.getPrice(), 0.01);
+  }
+
 }
