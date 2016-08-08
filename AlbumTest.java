@@ -1,22 +1,22 @@
-// import static org.junit.Assert.assertEquals;
-// import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import org.junit.*;
 
-// public class albumTest{
-//   Album album;
-  
-  
-//   @Before
-//   public void before(){
-//     album = new Album("Loveless", 7.99);
-//   }
+public class AlbumTest{
+  Album album;
 
-//   @Test
-//   public void albumHasName(){
-//     assertEquals("Loveless", album.getName());
-//   }
+  @Before
+  public void before(){
+    album = new Album("My Bloody Valentine", "Loveless", 7.99);
+  }
 
-//   @Test
-//   public void albumHasPrice(){
-//     assertEquals(7.99, album.getPrice());
-//   }
-// }
+  @Test
+  public void albumHasArtist(){
+  assertEquals("My Bloody Valentine", album.getArtist());
+  }
+
+  @Test
+  public void albumHasTitle(){
+  assertEquals("Loveless", album.getTitle());
+  }
+
+}
