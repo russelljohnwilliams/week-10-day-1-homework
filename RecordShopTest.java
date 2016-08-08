@@ -1,28 +1,29 @@
-import static org.junit.ssert.assertEquals;
+import static org.junit.Assert.assertEquals;
 import org.junit.*;
 
 public class RecordShopTest{
   RecordShop recordShop;
-  Album album;
+  Albums album;
 
   @Before
   public void before(){
     recordShop = new RecordShop("Surface Noise");
-    album = new Album();
+    album = new Albums();
   }
 
-  @test
+  @Test
   public void shopHasName(){
   assertEquals("Surface Noise", recordShop.getName());
-}
+  }
 
-  @test
+  @Test
   public void shopHasNoStock(){
     assertEquals(0, recordShop.stockCheck());
   }
 
-  @test
-  public void bookAlbumInotStock(){
+  @Test
+  public void bookAlbumIntoStock(){
+    recordShop.checkInStock(album);
     assertEquals(1, recordShop.stockCheck());
   }
 
